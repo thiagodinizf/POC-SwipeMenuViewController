@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		476B156B207E39C3007B3135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B156A207E39C3007B3135 /* AppDelegate.swift */; };
-		476B156D207E39C3007B3135 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B156C207E39C3007B3135 /* ViewController.swift */; };
+		476B156D207E39C3007B3135 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B156C207E39C3007B3135 /* MenuViewController.swift */; };
 		476B1570207E39C3007B3135 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476B156E207E39C3007B3135 /* Main.storyboard */; };
 		476B1572207E39C3007B3135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 476B1571207E39C3007B3135 /* Assets.xcassets */; };
 		476B1575207E39C3007B3135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476B1573207E39C3007B3135 /* LaunchScreen.storyboard */; };
+		47A1EEFE207E458000970EA3 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A1EEFD207E458000970EA3 /* ResultViewController.swift */; };
+		47A1EF01207E471D00970EA3 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A1EF00207E471D00970EA3 /* Storyboards.swift */; };
+		6A7A934CD7836E85BF59FB25 /* Pods_POC_Tabmenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC65016684A59857075B1855 /* Pods_POC_Tabmenu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		476B1567207E39C2007B3135 /* POC-Tabmenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POC-Tabmenu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		476B156A207E39C3007B3135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		476B156C207E39C3007B3135 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		476B156C207E39C3007B3135 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		476B156F207E39C3007B3135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		476B1571207E39C3007B3135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		476B1574207E39C3007B3135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		476B1576207E39C3007B3135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47A1EEFD207E458000970EA3 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		47A1EF00207E471D00970EA3 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		6FCC724FE2F5EA78AC933822 /* Pods-POC-Tabmenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC-Tabmenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-POC-Tabmenu/Pods-POC-Tabmenu.release.xcconfig"; sourceTree = "<group>"; };
+		A0C728C870798FC13B10DB8C /* Pods-POC-Tabmenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC-Tabmenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POC-Tabmenu/Pods-POC-Tabmenu.debug.xcconfig"; sourceTree = "<group>"; };
+		CC65016684A59857075B1855 /* Pods_POC_Tabmenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POC_Tabmenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A7A934CD7836E85BF59FB25 /* Pods_POC_Tabmenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				476B1569207E39C2007B3135 /* POC-Tabmenu */,
 				476B1568207E39C2007B3135 /* Products */,
+				F3F71F6B7EFEB0444C770054 /* Pods */,
+				BF86EF387558FF3B4D8E1EE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,33 @@
 		476B1569207E39C2007B3135 /* POC-Tabmenu */ = {
 			isa = PBXGroup;
 			children = (
+				47A1EF00207E471D00970EA3 /* Storyboards.swift */,
 				476B156A207E39C3007B3135 /* AppDelegate.swift */,
-				476B156C207E39C3007B3135 /* ViewController.swift */,
+				476B156C207E39C3007B3135 /* MenuViewController.swift */,
 				476B156E207E39C3007B3135 /* Main.storyboard */,
 				476B1571207E39C3007B3135 /* Assets.xcassets */,
 				476B1573207E39C3007B3135 /* LaunchScreen.storyboard */,
 				476B1576207E39C3007B3135 /* Info.plist */,
+				47A1EEFD207E458000970EA3 /* ResultViewController.swift */,
 			);
 			path = "POC-Tabmenu";
+			sourceTree = "<group>";
+		};
+		BF86EF387558FF3B4D8E1EE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC65016684A59857075B1855 /* Pods_POC_Tabmenu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3F71F6B7EFEB0444C770054 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0C728C870798FC13B10DB8C /* Pods-POC-Tabmenu.debug.xcconfig */,
+				6FCC724FE2F5EA78AC933822 /* Pods-POC-Tabmenu.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 476B1579207E39C3007B3135 /* Build configuration list for PBXNativeTarget "POC-Tabmenu" */;
 			buildPhases = (
+				AF834A562DD20983A531D0DB /* [CP] Check Pods Manifest.lock */,
 				476B1563207E39C2007B3135 /* Sources */,
 				476B1564207E39C2007B3135 /* Frameworks */,
 				476B1565207E39C2007B3135 /* Resources */,
+				4D5D9732D1D0E4CDAA979893 /* [CP] Embed Pods Frameworks */,
+				45FB36F01B417014D1131866 /* [CP] Copy Pods Resources */,
+				47A1EEFF207E46ED00970EA3 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -131,13 +165,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45FB36F01B417014D1131866 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POC-Tabmenu/Pods-POC-Tabmenu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47A1EEFF207E46ED00970EA3 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\nswiftgen storyboards -t swift4 \"$PROJECT_DIR/$PROJECT_NAME\" --output \"$PROJECT_DIR/$PROJECT_NAME/Storyboards.swift\"\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
+		};
+		4D5D9732D1D0E4CDAA979893 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-POC-Tabmenu/Pods-POC-Tabmenu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwipeMenuViewController/SwipeMenuViewController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeMenuViewController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POC-Tabmenu/Pods-POC-Tabmenu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF834A562DD20983A531D0DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-POC-Tabmenu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		476B1563207E39C2007B3135 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				476B156D207E39C3007B3135 /* ViewController.swift in Sources */,
+				47A1EF01207E471D00970EA3 /* Storyboards.swift in Sources */,
+				476B156D207E39C3007B3135 /* MenuViewController.swift in Sources */,
 				476B156B207E39C3007B3135 /* AppDelegate.swift in Sources */,
+				47A1EEFE207E458000970EA3 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +376,7 @@
 		};
 		476B157A207E39C3007B3135 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0C728C870798FC13B10DB8C /* Pods-POC-Tabmenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +392,7 @@
 		};
 		476B157B207E39C3007B3135 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FCC724FE2F5EA78AC933822 /* Pods-POC-Tabmenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
