@@ -9,38 +9,32 @@
 import UIKit
 import SwipeMenuViewController
 
+struct TabModel {
+    let id: Int
+    let title: String
+}
+
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var swipeMenuView: SwipeMenuView!
     
-    var options = SwipeMenuViewOptions()
+    var options: SwipeMenuViewOptions = .init()
     
-    var tabs = ["Filmes (46)","Programas de TV / Séries (5)","Filmes para alugar (23)"]
-    var controllers: [ResultViewController] = []
+    var tabs = [TabModel(id: 30031, title: "Filmes (46)"),
+                TabModel(id: 30032, title: "Programas de TV / Séries (5)"),
+                TabModel(id: 30033, title: "Filmes para alugar (23)")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         swipeMenuView.dataSource = self
         swipeMenuView.delegate = self
         
-        let options: SwipeMenuViewOptions = .init()
-        
-        let controller1 = StoryboardScene.Main.resultViewController.instantiate()
-        controller1.labelString = "1"
-        controller1.view.frame = self.view.frame
-        
-        let controller2 = StoryboardScene.Main.resultViewController.instantiate()
-        controller2.labelString = "2"
-        controller2.view.frame = self.view.frame
-        
-        let controller3 = StoryboardScene.Main.resultViewController.instantiate()
-        controller3.labelString = "3"
-        controller3.view.frame = self.view.frame
-        
-        controllers.append(controller1)
-        controllers.append(controller2)
-        controllers.append(controller3)
+        options.tabView.backgroundColor = UIColor(red: 24/255, green: 25/255, blue: 26/255, alpha: 1.0)
+        options.tabView.height = 50
+        options.tabView.underlineView.backgroundColor = UIColor(red: 68/255, green: 165/255, blue: 235/255, alpha: 1.0)
+        options.tabView.itemView.textColor = .lightGray
+        options.tabView.itemView.selectedTextColor = .white
         
         swipeMenuView.reloadData(options: options)
     }
@@ -49,18 +43,20 @@ class MenuViewController: UIViewController {
 extension MenuViewController: SwipeMenuViewDelegate {
     
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, didChangeIndexFrom fromIndex: Int, to toIndex: Int) {
-        print("mudou de \(fromIndex) para \(toIndex)")
+        swipeMenuView.reloadData(options: options, default: toIndex, isOrientationChange: false)
     }
 }
 
 extension MenuViewController: SwipeMenuViewDataSource {
     
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> UIViewController {
-        return controllers[index]
+        let controller = StoryboardScene.Main.resultViewController.instantiate()
+        controller.filter = tabs[index].id
+        return controller
     }
     
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, titleForPageAt index: Int) -> String {
-        return tabs[index]
+        return tabs[index].title
     }
     
     func numberOfPages(in swipeMenuView: SwipeMenuView) -> Int {

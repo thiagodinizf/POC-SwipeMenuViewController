@@ -61,7 +61,7 @@ internal enum StoryboardScene {
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
 
-    internal static let initialScene = InitialSceneType<POC_Tabmenu.MenuViewController>(storyboard: Main.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Main.self)
 
     internal static let menuViewController = SceneType<POC_Tabmenu.MenuViewController>(storyboard: Main.self, identifier: "MenuViewController")
 

@@ -10,16 +10,38 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    @IBOutlet weak var labelController: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-    var labelString = ""
+    var filter: Int = 0
+    var codes:[Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
+        reloadData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        labelController.text = labelString
+    func reloadData() {
+        codes.append(filter)
+        tableView.reloadData()
+        print(filter)
     }
+}
+
+extension ResultViewController: UITableViewDelegate {
+    
+}
+
+extension ResultViewController: UITableViewDataSource {
+ 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return codes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = String(codes[indexPath.row])
+        return cell
+    }
+    
 }
